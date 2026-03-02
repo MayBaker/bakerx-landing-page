@@ -1,0 +1,2329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BakerX Performance Parts — 5&quot; SS304 Stainless Downpipe for BMW B58. Engineered in Ontario, Canada. No duty. Ships fast.">
+  <title>BakerX Performance Parts — Flow Without Compromise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* =============================================
+       CSS CUSTOM PROPERTIES
+    ============================================= */
+    :root {
+      --clr-bg:           #000000;
+      --clr-bg-surface:   #1A1A1A;
+      --clr-bg-elevated:  #242424;
+      --clr-bg-deep:      #0D0D0D;
+      --clr-accent:       #E60000;
+      --clr-accent-dim:   rgba(230, 0, 0, 0.15);
+      --clr-accent-glow:  rgba(230, 0, 0, 0.08);
+      --clr-border:       #333333;
+      --clr-border-dim:   #1F1F1F;
+      --clr-text:         #FFFFFF;
+      --clr-text-muted:   #999999;
+      --clr-text-dim:     #555555;
+      --clr-steel-hi:     #E8EBEE;
+      --clr-steel-mid:    #C8CDD3;
+      --clr-steel-lo:     #6A7078;
+
+      --font-display:     'Oswald', sans-serif;
+      --font-mono:        'DM Mono', monospace;
+
+      --nav-height:       64px;
+      --max-width:        1280px;
+      --section-pad:      clamp(4rem, 8vw, 8rem);
+
+      --ease-out-expo:    cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out:      cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* =============================================
+       RESET & BASE
+    ============================================= */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--nav-height);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background: var(--clr-bg);
+      color: var(--clr-text);
+      font-family: var(--font-mono);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font: inherit; }
+
+    /* =============================================
+       TYPOGRAPHY UTILITIES
+    ============================================= */
+    .text--accent   { color: var(--clr-accent); }
+    .text--muted    { color: var(--clr-text-muted); }
+    .text--dim      { color: var(--clr-text-dim); }
+    .text--mono     { font-family: var(--font-mono); }
+    .text--display  { font-family: var(--font-display); }
+    .text--upper    { text-transform: uppercase; letter-spacing: 0.08em; }
+
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      margin-bottom: 1.2rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      text-transform: uppercase;
+      line-height: 0.93;
+      letter-spacing: -0.01em;
+    }
+
+    /* =============================================
+       BUTTON SYSTEM
+    ============================================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      transition: all 200ms var(--ease-out-expo);
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .btn--primary {
+      background: var(--clr-accent);
+      color: #fff;
+    }
+    .btn--primary:hover {
+      background: #C00000;
+      transform: translateY(-1px);
+    }
+    .btn--primary:active { transform: translateY(0); }
+
+    .btn--ghost {
+      background: transparent;
+      color: #fff;
+      border: 1px solid var(--clr-border);
+    }
+    .btn--ghost:hover {
+      border-color: #fff;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .btn--large {
+      padding: 18px 40px;
+      font-size: 0.9rem;
+    }
+
+    .btn--full { width: 100%; justify-content: center; }
+
+    /* =============================================
+       LAYOUT UTILITIES
+    ============================================= */
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 4vw, 3rem);
+    }
+
+    .section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section__inner {
+      padding: var(--section-pad) 0;
+    }
+
+    .section__header {
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+
+    /* =============================================
+       SCROLL ANIMATION STATES
+    ============================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+    }
+    .reveal--left {
+      opacity: 0;
+      transform: translateX(-28px);
+      transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+    }
+    .reveal--right {
+      opacity: 0;
+      transform: translateX(28px);
+      transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+    }
+    .reveal.is-visible,
+    .reveal--left.is-visible,
+    .reveal--right.is-visible {
+      opacity: 1;
+      transform: translate(0);
+    }
+    .reveal-d1 { transition-delay: 80ms; }
+    .reveal-d2 { transition-delay: 160ms; }
+    .reveal-d3 { transition-delay: 240ms; }
+
+    /* =============================================
+       1. NAVIGATION
+    ============================================= */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      height: var(--nav-height);
+      transition: background 300ms ease, border-color 300ms ease, backdrop-filter 300ms ease;
+    }
+
+    .nav--scrolled {
+      background: rgba(0, 0, 0, 0.95);
+      border-bottom: 1px solid var(--clr-border);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      gap: 2rem;
+    }
+
+    .nav__logo {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav__logo svg {
+      height: 22px;
+      width: auto;
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      margin-left: auto;
+    }
+
+    .nav__links a {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.75);
+      padding: 6px 12px;
+      transition: color 200ms ease;
+      position: relative;
+    }
+    .nav__links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 12px;
+      right: 12px;
+      height: 1px;
+      background: var(--clr-accent);
+      transform: scaleX(0);
+      transition: transform 200ms var(--ease-out-expo);
+      transform-origin: left;
+    }
+    .nav__links a:hover { color: #fff; }
+    .nav__links a:hover::after { transform: scaleX(1); }
+
+    .nav__cta {
+      margin-left: 1rem;
+      flex-shrink: 0;
+      padding: 10px 20px;
+      font-size: 0.75rem;
+    }
+
+    /* Hamburger */
+    .nav__hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      padding: 8px;
+      margin-left: auto;
+    }
+    .nav__hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: #fff;
+      transition: all 250ms ease;
+    }
+    .nav__hamburger.is-open span:nth-child(1) {
+      transform: translateY(6.5px) rotate(45deg);
+    }
+    .nav__hamburger.is-open span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    .nav__hamburger.is-open span:nth-child(3) {
+      transform: translateY(-6.5px) rotate(-45deg);
+    }
+
+    /* Mobile drawer */
+    .nav__drawer {
+      position: fixed;
+      inset: 0;
+      background: #000;
+      z-index: 190;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem clamp(1.5rem, 4vw, 3rem);
+      transform: translateX(100%);
+      transition: transform 350ms var(--ease-out-expo);
+    }
+    .nav__drawer.is-open { transform: translateX(0); }
+    .nav__drawer ul { display: flex; flex-direction: column; gap: 0.5rem; }
+    .nav__drawer a {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 8vw, 3rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: rgba(255,255,255,0.4);
+      transition: color 200ms ease;
+      display: block;
+      padding: 0.3rem 0;
+    }
+    .nav__drawer a:hover { color: #fff; }
+    .nav__drawer .drawer-cta {
+      margin-top: 2.5rem;
+    }
+
+    /* =============================================
+       2. HERO
+    ============================================= */
+    .hero {
+      min-height: 100svh;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      position: relative;
+      background: #000;
+      padding-top: var(--nav-height);
+    }
+
+    /* Grid texture */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg,   transparent, transparent 79px, rgba(255,255,255,0.022) 80px),
+        repeating-linear-gradient(90deg,  transparent, transparent 79px, rgba(255,255,255,0.022) 80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Red atmospheric glow */
+    .hero::after {
+      content: '';
+      position: absolute;
+      left: -5%;
+      top: 15%;
+      width: 55%;
+      height: 70%;
+      background: radial-gradient(ellipse, rgba(230,0,0,0.09) 0%, transparent 68%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Bottom red bar */
+    .hero__bottom-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--clr-accent) 0%, var(--clr-accent) 35%, transparent 100%);
+      z-index: 2;
+    }
+
+    /* Scan line */
+    .hero__scan {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hero__scan::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0; right: 0;
+      height: 120px;
+      background: linear-gradient(180deg, transparent, rgba(255,255,255,0.025), transparent);
+      animation: scan 14s linear infinite;
+    }
+    @keyframes scan {
+      from { transform: translateY(-120px); }
+      to   { transform: translateY(calc(100vh + 120px)); }
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      padding: clamp(3rem, 6vw, 6rem) clamp(1.5rem, 4vw, 3rem) clamp(3rem, 6vw, 6rem) clamp(1.5rem, 4vw, 5rem);
+    }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      border: 1px solid rgba(230,0,0,0.5);
+      background: rgba(230,0,0,0.1);
+      padding: 6px 14px;
+      margin-bottom: 1.8rem;
+    }
+    .hero__badge::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--clr-accent);
+      animation: blink 2s step-end infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+
+    .hero__headline {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(3.2rem, 6.5vw, 6rem);
+      text-transform: uppercase;
+      line-height: 0.91;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero__sub {
+      font-family: var(--font-mono);
+      font-size: clamp(0.78rem, 1.2vw, 0.9rem);
+      color: var(--clr-text-muted);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      max-width: 480px;
+    }
+    .hero__sub strong {
+      color: #ccc;
+      font-weight: 500;
+    }
+
+    .hero__ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .hero__scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: clamp(1.5rem, 4vw, 5rem);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .hero__scroll span {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--clr-text-dim);
+      writing-mode: vertical-rl;
+    }
+    .hero__scroll-bar {
+      width: 1px;
+      height: 48px;
+      background: var(--clr-border);
+      position: relative;
+      overflow: hidden;
+      margin-top: 4px;
+    }
+    .hero__scroll-bar::after {
+      content: '';
+      position: absolute;
+      top: -100%;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: var(--clr-accent);
+      animation: scrollpulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollpulse {
+      0%   { top: -100%; }
+      100% { top: 100%; }
+    }
+
+    /* CSS Pipe Render */
+    .hero__visual {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: clamp(340px, 55vw, 600px);
+      padding: 2rem;
+    }
+
+    .pipe-render {
+      position: relative;
+      width: clamp(280px, 38vw, 480px);
+      height: clamp(280px, 38vw, 480px);
+    }
+
+    .pipe-render__body {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 78%;
+      height: 48%;
+      transform: translate(-50%, -50%) rotate(-18deg);
+      background: radial-gradient(
+        ellipse 65% 55% at 32% 28%,
+        #ECEFF2 0%,
+        #D4D9DF 12%,
+        #B0B8C1 28%,
+        #8A9098 45%,
+        #545A62 62%,
+        #2E3238 78%,
+        #12151A 90%,
+        #08090B 100%
+      );
+      box-shadow:
+        0 24px 70px rgba(0,0,0,0.9),
+        0 8px 24px rgba(0,0,0,0.7),
+        inset 0 2px 6px rgba(255,255,255,0.18),
+        inset 0 -1px 3px rgba(0,0,0,0.5),
+        0 0 90px rgba(230,0,0,0.12);
+      border: 1px solid rgba(255,255,255,0.07);
+      overflow: hidden;
+    }
+
+    /* Shimmer on pipe */
+    .pipe-render__body::after {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      background: linear-gradient(90deg,
+        transparent 20%,
+        rgba(255,255,255,0.07) 45%,
+        rgba(255,255,255,0.12) 50%,
+        rgba(255,255,255,0.07) 55%,
+        transparent 80%
+      );
+      animation: pipe-shimmer 7s ease-in-out infinite 2.5s;
+    }
+    @keyframes pipe-shimmer {
+      0%, 100% { transform: translateX(-160%); }
+      50%       { transform: translateX(160%); }
+    }
+
+    .pipe-render__bore {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 42%;
+      height: 60%;
+      transform: translate(-50%, -50%) rotate(-18deg);
+      background: radial-gradient(
+        ellipse at 38% 32%,
+        #1c1c1c 0%,
+        #0a0a0a 50%,
+        #000 100%
+      );
+      box-shadow:
+        inset 0 4px 16px rgba(0,0,0,1),
+        inset 0 -2px 8px rgba(0,0,0,0.8),
+        0 0 0 2.5px rgba(200,210,220,0.22),
+        0 0 0 5px rgba(255,255,255,0.04);
+      border: 1px solid rgba(150,160,170,0.15);
+    }
+
+    /* Inner wall ring highlight */
+    .pipe-render__bore::after {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
+    }
+
+    /* Spec callout lines */
+    .pipe-callout {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      animation: callout-fade 3.5s ease-in-out infinite;
+    }
+    .pipe-callout--diameter {
+      top: 22%;
+      right: 0%;
+      animation-delay: 0s;
+    }
+    .pipe-callout--material {
+      bottom: 18%;
+      left: -2%;
+      flex-direction: row-reverse;
+      animation-delay: 1.75s;
+    }
+    @keyframes callout-fade {
+      0%, 100% { opacity: 0.45; }
+      50%       { opacity: 1; }
+    }
+    .pipe-callout__line {
+      display: block;
+      height: 1px;
+      width: 52px;
+      background: linear-gradient(to right, transparent, rgba(230,0,0,0.9));
+    }
+    .pipe-callout--material .pipe-callout__line {
+      background: linear-gradient(to left, transparent, rgba(230,0,0,0.9));
+    }
+    .pipe-callout__text {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      color: var(--clr-accent);
+      white-space: nowrap;
+    }
+
+    /* Decorative corner brackets */
+    .pipe-render__corner {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-color: rgba(230,0,0,0.4);
+      border-style: solid;
+    }
+    .pipe-render__corner--tl { top: 8%;  left: 8%;  border-width: 1px 0 0 1px; }
+    .pipe-render__corner--tr { top: 8%;  right: 8%; border-width: 1px 1px 0 0; }
+    .pipe-render__corner--bl { bottom: 8%; left: 8%;  border-width: 0 0 1px 1px; }
+    .pipe-render__corner--br { bottom: 8%; right: 8%; border-width: 0 1px 1px 0; }
+
+    /* Hero animate classes */
+    .hero-anim {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: hero-in 0.75s var(--ease-out-expo) both;
+    }
+    @keyframes hero-in {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* =============================================
+       3. ADVANTAGE STRIP
+    ============================================= */
+    .strip {
+      background: var(--clr-accent);
+      position: relative;
+      z-index: 10;
+    }
+
+    .strip__inner {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      min-height: 64px;
+    }
+
+    .strip__item {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 1rem 2.5rem;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .strip__divider {
+      width: 1px;
+      background: rgba(255,255,255,0.25);
+      margin: 0.8rem 0;
+      flex-shrink: 0;
+    }
+
+    .strip__icon {
+      flex-shrink: 0;
+      opacity: 0.9;
+    }
+
+    .strip__text {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    /* =============================================
+       4. ENGINEERING PILLARS
+    ============================================= */
+    .pillars {
+      background: var(--clr-bg);
+    }
+
+    .pillars__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--clr-border);
+    }
+
+    .pillar {
+      background: var(--clr-bg-surface);
+      padding: clamp(2rem, 3vw, 2.8rem);
+      position: relative;
+      overflow: hidden;
+      border-top: 2px solid var(--clr-accent);
+    }
+
+    .pillar__watermark {
+      position: absolute;
+      bottom: -0.5rem;
+      right: 1rem;
+      font-family: var(--font-mono);
+      font-size: 6.5rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.03);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .pillar__content { position: relative; z-index: 1; }
+
+    .pillar__icon {
+      width: 36px;
+      height: 36px;
+      margin-bottom: 1.4rem;
+      color: var(--clr-accent);
+    }
+
+    .pillar__title {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.5rem;
+      color: #fff;
+    }
+
+    .pillar__specs { display: flex; flex-direction: column; }
+
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--clr-border-dim);
+    }
+    .spec-row:first-child { border-top: 1px solid var(--clr-border-dim); }
+
+    .spec-row__key {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      color: var(--clr-text-dim);
+      flex-shrink: 0;
+    }
+
+    .spec-row__val {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 0.82rem;
+      color: #fff;
+      text-align: right;
+    }
+
+    /* =============================================
+       5. PRODUCT FEATURE
+    ============================================= */
+    .product-feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    /* Left visual column */
+    .pf-visual {
+      background: #111;
+      position: relative;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Hatch texture */
+    .pf-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0' y1='8' x2='8' y2='0' stroke='rgba(255,255,255,0.025)' stroke-width='0.5'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    /* Red right-edge bar */
+    .pf-visual::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 3px;
+      background: var(--clr-accent);
+    }
+
+    .pf-visual__frame {
+      position: relative;
+      width: clamp(260px, 36vw, 420px);
+      height: clamp(260px, 36vw, 420px);
+    }
+
+    /* Engineering corner brackets */
+    .frame-corner {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-color: rgba(255,255,255,0.15);
+      border-style: solid;
+    }
+    .frame-corner--tl { top: 0; left: 0; border-width: 1px 0 0 1px; }
+    .frame-corner--tr { top: 0; right: 0; border-width: 1px 1px 0 0; }
+    .frame-corner--bl { bottom: 0; left: 0; border-width: 0 0 1px 1px; }
+    .frame-corner--br { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
+
+    .pf-visual__sku {
+      position: absolute;
+      top: 1rem;
+      left: 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      color: var(--clr-text-dim);
+      text-transform: uppercase;
+    }
+
+    /* Larger pipe render for product section */
+    .pipe-render--lg {
+      width: 100%;
+      height: 100%;
+    }
+    .pipe-render--lg .pipe-render__body {
+      width: 82%;
+      height: 52%;
+    }
+    .pipe-render--lg .pipe-render__bore {
+      width: 44%;
+      height: 62%;
+    }
+
+    /* Right details column */
+    .pf-details {
+      background: var(--clr-bg-deep);
+      padding: clamp(2.5rem, 4vw, 5rem) clamp(2rem, 3.5vw, 4rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .pf-details__sku {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      color: var(--clr-text-dim);
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    .pf-details__name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.01em;
+    }
+
+    .pf-details__price {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 2.2rem;
+      color: var(--clr-accent);
+      margin-bottom: 2rem;
+      letter-spacing: 0.02em;
+    }
+    .pf-details__price sup {
+      font-size: 1rem;
+      vertical-align: super;
+    }
+
+    /* Spec table */
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2.2rem;
+    }
+
+    .spec-table tr { transition: background 150ms ease; }
+    .spec-table tr:hover { background: rgba(255,255,255,0.025); }
+
+    .spec-table th {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--clr-text-dim);
+      text-align: left;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--clr-border-dim);
+      font-weight: 400;
+      text-transform: uppercase;
+      width: 45%;
+    }
+
+    .spec-table td {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 0.85rem;
+      color: #fff;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--clr-border-dim);
+      text-align: right;
+    }
+
+    /* Fitment list */
+    .fitment-list { margin-bottom: 2.2rem; }
+
+    .fitment-list__title {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--clr-border);
+    }
+
+    .fitment-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: #ccc;
+      padding: 0.45rem 0;
+    }
+
+    .fitment-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--clr-accent);
+      flex-shrink: 0;
+    }
+
+    .pf-details__actions {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .pf-details__doc-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--clr-text-muted);
+      text-transform: uppercase;
+      transition: color 200ms ease;
+    }
+    .pf-details__doc-link:hover { color: #fff; }
+    .pf-details__doc-link svg { width: 14px; height: 14px; }
+
+    /* =============================================
+       6. TECHNICAL SPECS
+    ============================================= */
+    .specs-section {
+      background: var(--clr-bg);
+      padding: var(--section-pad) 0;
+      border-top: 1px solid var(--clr-border-dim);
+      border-bottom: 1px solid var(--clr-border-dim);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-bottom: 4rem;
+    }
+
+    .stat-block {
+      border-left: 3px solid var(--clr-accent);
+      padding: 1.5rem 2rem;
+      position: relative;
+    }
+    .stat-block + .stat-block {
+      border-left-color: var(--clr-border);
+    }
+    .stat-block:first-child {
+      border-left-color: var(--clr-accent);
+    }
+
+    .stat-block__num {
+      font-family: var(--font-mono);
+      font-size: clamp(3.5rem, 5vw, 5.5rem);
+      font-weight: 500;
+      color: #fff;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+    }
+    .stat-block__unit {
+      font-size: 0.5em;
+      color: var(--clr-accent);
+      vertical-align: super;
+      margin-left: 2px;
+    }
+
+    .stat-block__label {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--clr-text-dim);
+      margin-bottom: 0.3rem;
+    }
+
+    .stat-block__sub {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--clr-text-muted);
+      line-height: 1.4;
+    }
+
+    /* Diameter comparison */
+    .diameter-compare {
+      background: var(--clr-bg-surface);
+      border: 1px solid var(--clr-border);
+      padding: 2rem 2.5rem;
+    }
+
+    .diameter-compare__title {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--clr-text-dim);
+      margin-bottom: 1.8rem;
+    }
+
+    .compare-row {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .compare-row:last-child { margin-bottom: 0; }
+
+    .compare-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      color: var(--clr-text-muted);
+      width: 110px;
+      flex-shrink: 0;
+    }
+
+    .compare-bar-wrap {
+      flex: 1;
+      background: var(--clr-bg-elevated);
+      height: 28px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .compare-bar {
+      height: 100%;
+      width: 0;
+      transition: width 1.2s var(--ease-out-expo);
+      display: flex;
+      align-items: center;
+      padding-left: 0.75rem;
+    }
+    .compare-bar--oem {
+      background: #2A2A2A;
+    }
+    .compare-bar--bx {
+      background: var(--clr-accent);
+      box-shadow: 0 0 16px rgba(230,0,0,0.4);
+    }
+    .compare-bar span {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.08em;
+    }
+    .compare-bar--oem span { color: var(--clr-text-muted); }
+
+    /* =============================================
+       7. TRUST BAR
+    ============================================= */
+    .trust-bar {
+      background: #0A0A0A;
+      border-top: 1px solid var(--clr-border-dim);
+      border-bottom: 1px solid var(--clr-border-dim);
+    }
+
+    .trust-bar__inner {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .trust-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 2.5rem 1rem;
+      text-align: center;
+      border-right: 1px solid var(--clr-border-dim);
+    }
+    .trust-item:last-child { border-right: none; }
+
+    .trust-item__icon {
+      width: 28px;
+      height: 28px;
+      color: var(--clr-accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .trust-item__stat {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+
+    .trust-item__label {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--clr-text-muted);
+    }
+
+    /* =============================================
+       8. INSTALLER PROGRAM
+    ============================================= */
+    .installer {
+      background: var(--clr-bg-deep);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Noise grain overlay */
+    .installer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .installer__inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 5vw, 6rem);
+      align-items: start;
+    }
+
+    .installer__content { padding: var(--section-pad) 0; }
+
+    .installer__body {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--clr-text-muted);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      max-width: 420px;
+    }
+
+    .installer__benefits {
+      margin-bottom: 2.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: #ccc;
+    }
+    .benefit-item::before {
+      content: '›';
+      color: var(--clr-accent);
+      font-size: 1.1rem;
+      line-height: 1.3;
+      flex-shrink: 0;
+    }
+
+    /* Installer form */
+    .installer__form-wrap {
+      padding: var(--section-pad) 0;
+    }
+
+    .installer__form {
+      background: var(--clr-bg-surface);
+      border: 1px solid var(--clr-border);
+      padding: 2.5rem;
+    }
+
+    .form__header {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid var(--clr-border);
+      margin-bottom: 2rem;
+    }
+
+    .form__group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form__label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--clr-text-dim);
+      margin-bottom: 0.5rem;
+    }
+
+    .form__input {
+      width: 100%;
+      background: var(--clr-bg-elevated);
+      border: 1px solid var(--clr-border);
+      border-radius: 0;
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      padding: 11px 14px;
+      outline: none;
+      transition: border-color 200ms ease;
+      appearance: none;
+    }
+    .form__input:focus { border-color: var(--clr-accent); }
+    .form__input--error { border-color: var(--clr-accent) !important; }
+    .form__input::placeholder { color: var(--clr-text-dim); }
+
+    .form__input option { background: #1a1a1a; color: #fff; }
+
+    .form__success {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .form__success-title {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--clr-accent);
+      margin-bottom: 1rem;
+    }
+    .form__success-body {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--clr-text-muted);
+      line-height: 1.7;
+    }
+
+    /* =============================================
+       9. FOOTER
+    ============================================= */
+    .footer {
+      background: var(--clr-bg);
+      border-top: 2px solid var(--clr-border-dim);
+    }
+
+    .footer__inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      padding: clamp(3rem, 5vw, 5rem) 0 clamp(2rem, 3vw, 3rem);
+    }
+
+    .footer__brand-tagline {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--clr-text-dim);
+      margin-top: 1rem;
+      line-height: 1.6;
+      max-width: 220px;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .footer__social a {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--clr-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--clr-text-dim);
+      transition: all 200ms ease;
+    }
+    .footer__social a:hover {
+      border-color: var(--clr-accent);
+      color: var(--clr-accent);
+    }
+    .footer__social svg { width: 14px; height: 14px; }
+
+    .footer__nav-heading {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--clr-text-dim);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer__nav-list { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer__nav-list a {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.45);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: color 200ms ease;
+    }
+    .footer__nav-list a:hover { color: var(--clr-accent); }
+
+    .footer__bottom {
+      border-top: 1px solid var(--clr-border-dim);
+      padding: 1.2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .footer__copyright {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      color: var(--clr-text-dim);
+    }
+
+    .footer__canada-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border: 1px solid var(--clr-border-dim);
+      padding: 5px 12px;
+    }
+    .footer__canada-badge svg { width: 14px; height: 14px; color: var(--clr-text-dim); }
+    .footer__canada-badge span {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--clr-text-dim);
+    }
+
+    /* =============================================
+       RESPONSIVE — TABLET (768px+)
+    ============================================= */
+    @media (max-width: 1023px) {
+      .hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        min-height: auto;
+      }
+      .hero__visual {
+        order: -1;
+        min-height: 320px;
+        padding-top: calc(var(--nav-height) + 1rem);
+      }
+      .hero__content {
+        order: 1;
+        padding: 2rem clamp(1.5rem, 4vw, 3rem) 3rem;
+      }
+      .hero__scroll { display: none; }
+
+      .product-feature {
+        grid-template-columns: 1fr;
+      }
+      .pf-visual { min-height: 340px; }
+      .pf-visual::after { display: none; }
+
+      .installer__inner { grid-template-columns: 1fr; gap: 0; }
+      .installer__content { padding-bottom: 0; }
+      .installer__form-wrap { padding-top: 2rem; }
+
+      .footer__inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+      }
+
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* =============================================
+       RESPONSIVE — MOBILE (< 768px)
+    ============================================= */
+    @media (max-width: 767px) {
+      .nav__links { display: none; }
+      .nav__cta   { display: none; }
+      .nav__hamburger { display: flex; }
+
+      .strip__inner {
+        flex-direction: column;
+        padding: 0;
+      }
+      .strip__item { padding: 0.85rem 1.5rem; width: 100%; }
+      .strip__divider {
+        width: 100%;
+        height: 1px;
+        margin: 0;
+      }
+      .strip__text { font-size: 0.72rem; }
+
+      .pillars__grid { grid-template-columns: 1fr; }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .stat-block { padding: 1.2rem 1.5rem; }
+      .stat-block__num { font-size: 3rem; }
+
+      .trust-bar__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .trust-item { border-right: 1px solid var(--clr-border-dim); border-bottom: 1px solid var(--clr-border-dim); }
+      .trust-item:nth-child(2n) { border-right: none; }
+      .trust-item:nth-child(3),
+      .trust-item:nth-child(4) { border-bottom: none; }
+
+      .footer__inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+
+      .hero__ctas { flex-direction: column; }
+      .hero__ctas .btn { width: 100%; justify-content: center; }
+
+      .compare-row { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+      .compare-label { width: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================================================
+       NAVIGATION
+  ================================================ -->
+  <nav class="nav" id="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <!-- Logo -->
+        <a href="#" class="nav__logo" aria-label="BakerX Performance Parts">
+          <svg viewBox="0 0 140 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <text x="0" y="22" font-family="Oswald, sans-serif" font-weight="700" font-size="24" fill="#ffffff" letter-spacing="1">BAKER</text>
+            <text x="89" y="22" font-family="Oswald, sans-serif" font-weight="700" font-size="24" fill="#E60000" letter-spacing="1">X</text>
+            <line x1="89" y1="25" x2="110" y2="25" stroke="#E60000" stroke-width="1.5"/>
+          </svg>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="nav__links" role="list">
+          <li><a href="#product">Products</a></li>
+          <li><a href="#fitment">Fitment</a></li>
+          <li><a href="#installer">Installer Program</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+
+        <!-- CTA -->
+        <a href="#product" class="btn btn--primary nav__cta">Shop Now</a>
+
+        <!-- Hamburger -->
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="nav__drawer" id="mobile-drawer" role="dialog" aria-label="Navigation menu" aria-hidden="true">
+    <ul role="list">
+      <li><a href="#product">Products</a></li>
+      <li><a href="#fitment">Fitment</a></li>
+      <li><a href="#installer">Installer Program</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <div class="drawer-cta">
+      <a href="#product" class="btn btn--primary">Shop Downpipe</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ================================================
+         HERO
+    ================================================ -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero__scan" aria-hidden="true"></div>
+
+      <!-- Content -->
+      <div class="hero__content">
+        <div class="hero__badge hero-anim" style="animation-delay:0ms">
+          B58 Platform // Ontario Engineered
+        </div>
+        <h1 class="hero__headline hero-anim" id="hero-heading" style="animation-delay:120ms">
+          Flow Without<br><span class="text--accent">Compromise</span>
+        </h1>
+        <p class="hero__sub hero-anim" style="animation-delay:240ms">
+          5&Prime; SS304 Stainless Downpipe for the BMW B58 Engine.<br>
+          <strong>340i &nbsp;·&nbsp; 440i &nbsp;·&nbsp; M340i &nbsp;·&nbsp; GR Supra A90</strong>
+        </p>
+        <div class="hero__ctas hero-anim" style="animation-delay:360ms">
+          <a href="#product" class="btn btn--primary">Shop Downpipe</a>
+          <a href="#installer" class="btn btn--ghost">Installer Program</a>
+        </div>
+      </div>
+
+      <!-- CSS Pipe Render -->
+      <div class="hero__visual hero-anim" style="animation-delay:180ms" aria-hidden="true">
+        <div class="pipe-render">
+          <div class="pipe-render__body"></div>
+          <div class="pipe-render__bore"></div>
+
+          <!-- Engineering callouts -->
+          <div class="pipe-callout pipe-callout--diameter">
+            <div class="pipe-callout__line"></div>
+            <span class="pipe-callout__text">Ø 5.0&Prime;</span>
+          </div>
+          <div class="pipe-callout pipe-callout--material">
+            <div class="pipe-callout__line"></div>
+            <span class="pipe-callout__text">SS304 TIG</span>
+          </div>
+
+          <!-- Corner brackets -->
+          <div class="pipe-render__corner pipe-render__corner--tl" aria-hidden="true"></div>
+          <div class="pipe-render__corner pipe-render__corner--tr" aria-hidden="true"></div>
+          <div class="pipe-render__corner pipe-render__corner--bl" aria-hidden="true"></div>
+          <div class="pipe-render__corner pipe-render__corner--br" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Bottom red bar -->
+      <div class="hero__bottom-bar" aria-hidden="true"></div>
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll hero-anim" style="animation-delay:600ms" aria-hidden="true">
+        <div class="hero__scroll-bar"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ================================================
+         CANADIAN ADVANTAGE STRIP
+    ================================================ -->
+    <section class="strip" aria-label="Key advantages">
+      <div class="strip__inner">
+        <div class="strip__item">
+          <div class="strip__icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="square">
+              <path d="M12 2L13.9 8.1H20.6L14.8 11.9L16.8 18L12 14.1L7.2 18L9.2 11.9L3.4 8.1H10.1Z"/>
+            </svg>
+          </div>
+          <span class="strip__text">No Duty. Ships from Ontario.</span>
+        </div>
+        <div class="strip__divider" aria-hidden="true"></div>
+        <div class="strip__item">
+          <div class="strip__icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="square">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <span class="strip__text">Guaranteed OEM-Spec Fitment</span>
+        </div>
+        <div class="strip__divider" aria-hidden="true"></div>
+        <div class="strip__item">
+          <div class="strip__icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="square">
+              <rect x="1" y="3" width="15" height="13"/>
+              <path d="M16 8h4l3 3v5h-7V8z"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <span class="strip__text">2–3 Day Delivery, Canada-Wide</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         ENGINEERING PILLARS
+    ================================================ -->
+    <section class="pillars section" id="about">
+      <div class="container">
+        <div class="section__inner">
+          <div class="section__header reveal">
+            <span class="section-label">Engineering Advantage</span>
+            <h2 class="section-title">Beyond<br><span class="text--accent">Bolt-Ons</span></h2>
+          </div>
+          <div class="pillars__grid">
+
+            <!-- Pillar 01 -->
+            <article class="pillar reveal" aria-labelledby="pillar-1-title">
+              <div class="pillar__watermark" aria-hidden="true">01</div>
+              <div class="pillar__content">
+                <div class="pillar__icon" aria-hidden="true">
+                  <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
+                    <rect x="6" y="14" width="24" height="8"/>
+                    <line x1="10" y1="14" x2="10" y2="22"/>
+                    <line x1="18" y1="14" x2="18" y2="22"/>
+                    <line x1="26" y1="14" x2="26" y2="22"/>
+                    <line x1="6" y1="10" x2="6" y2="14"/>
+                    <line x1="30" y1="10" x2="30" y2="14"/>
+                    <path d="M8 10 L6 10 L6 8" stroke-width="1"/>
+                    <path d="M28 10 L30 10 L30 8" stroke-width="1"/>
+                  </svg>
+                </div>
+                <h3 class="pillar__title" id="pillar-1-title">Material Integrity</h3>
+                <ul class="pillar__specs" role="list">
+                  <li class="spec-row">
+                    <span class="spec-row__key">Alloy</span>
+                    <span class="spec-row__val">SS304 Stainless</span>
+                  </li>
+                  <li class="spec-row">
+                    <span class="spec-row__key">Gauge</span>
+                    <span class="spec-row__val">16 AWG</span>
+                  </li>
+                  <li class="spec-row">
+                    <span class="spec-row__key">Weld</span>
+                    <span class="spec-row__val">TIG — Full Penetration</span>
+                  </li>
+                  <li class="spec-row">
+                    <span class="spec-row__key">Finish</span>
+                    <span class="spec-row__val">Brushed Industrial</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Pillar 02 -->
+            <article class="pillar reveal reveal-d1" aria-labelledby="pillar-2-title">
+              <div class="pillar__watermark" aria-hidden="true">02</div>
+              <div class="pillar__content">
+                <div class="pillar__icon" aria-hidden="true">
+                  <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
+                    <path d="M4 18 C4 18 10 10 18 10 C26 10 32 18 32 18"/>
+                    <path d="M4 18 C4 18 10 26 18 26 C26 26 32 18 32 18"/>
+                    <circle cx="18" cy="18" r="4"/>
+                    <line x1="26" y1="12" x2="30" y2="8"/>
+                    <line x1="28" y1="8" x2="32" y2="8"/>
+                    <line x1="32" y1="8" x2="32" y2="12"/>
+                  </svg>
+                </div>
+                <h3 class="pillar__title" id="pillar-2-title">Flow Analysis</h3>
+                <ul class="pillar__specs" role="list">
+                  <li class="spec-row">
+                    <span class="spec-row__key">Diameter</span>
+                    <span class="spec-row__val">5.0&Prime; (vs OEM 3.5&Prime;)</span>
+                  </li>
+                  <li class="spec-row">
+                    <span class="spec-row__key">Transition</span>
+                    <span class="spec-row__val">Bellmouth Taper</span>
+                  </li>
+                  <li class="spec-row">
+                    <span class="spec-row__key">Backpressure</span>
+                    <span class="spec-row__val">Minimized at Turbine Exit</span>
+                  </li>
+                  <li class="spec-row">
+                    <span class="spec-row__key">Velocity</span>
+                    <span class="spec-row__val">Optimized Exhaust Path</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Pillar 03 -->
+            <article class="pillar reveal reveal-d2" aria-labelledby="pillar-3-title">
+              <div class="pillar__watermark" aria-hidden="true">03</div>
+              <div class="pillar__content">
+                <div class="pillar__icon" aria-hidden="true">
+                  <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
+                    <rect x="4" y="4" width="28" height="28"/>
+                    <rect x="10" y="10" width="16" height="16"/>
+                    <line x1="4" y1="4" x2="10" y2="10"/>
+                    <line x1="32" y1="4" x2="26" y2="10"/>
+                    <line x1="4" y1="32" x2="10" y2="26"/>
+                    <line x1="32" y1="32" x2="26" y2="26"/>
+                    <circle cx="18" cy="18" r="2"/>
+                  </svg>
+                </div>
+                <h3 class="pillar__title" id="pillar-3-title">Precision Fitment</h3>
+                <ul class="pillar__specs" role="list">
+                  <li class="spec-row">
+                    <span class="spec-row__key">Design</span>
+                    <span class="spec-row__val">CAD-Engineered</span>
+                  </li>
+                  <li class="spec-row">
+                    <span class="spec-row__key">Mounting</span>
+                    <span class="spec-row__val">OEM-Spec Points</span>
+                  </li>
+                  <li class="spec-row">
+                    <span class="spec-row__key">Installation</span>
+                    <span class="spec-row__val">True Bolt-On</span>
+                  </li>
+                  <li class="spec-row">
+                    <span class="spec-row__key">Origin</span>
+                    <span class="spec-row__val">Ontario, Canada</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         HERO PRODUCT FEATURE
+    ================================================ -->
+    <section class="product-feature" id="product" aria-labelledby="product-title">
+
+      <!-- Left: Visual -->
+      <div class="pf-visual reveal--left">
+        <div class="pf-visual__sku" aria-hidden="true">BX-B58-DP-5SS // REV 1.2</div>
+        <div class="pf-visual__frame">
+          <div class="frame-corner frame-corner--tl" aria-hidden="true"></div>
+          <div class="frame-corner frame-corner--tr" aria-hidden="true"></div>
+          <div class="frame-corner frame-corner--bl" aria-hidden="true"></div>
+          <div class="frame-corner frame-corner--br" aria-hidden="true"></div>
+
+          <div class="pipe-render pipe-render--lg" aria-label="Product visual: 5 inch stainless downpipe cross-section">
+            <div class="pipe-render__body"></div>
+            <div class="pipe-render__bore"></div>
+            <div class="pipe-callout pipe-callout--diameter" aria-hidden="true">
+              <div class="pipe-callout__line"></div>
+              <span class="pipe-callout__text">Ø 5.0&Prime;</span>
+            </div>
+            <div class="pipe-callout pipe-callout--material" aria-hidden="true">
+              <div class="pipe-callout__line"></div>
+              <span class="pipe-callout__text">16ga SS304</span>
+            </div>
+            <div class="pipe-render__corner pipe-render__corner--tl" aria-hidden="true"></div>
+            <div class="pipe-render__corner pipe-render__corner--tr" aria-hidden="true"></div>
+            <div class="pipe-render__corner pipe-render__corner--bl" aria-hidden="true"></div>
+            <div class="pipe-render__corner pipe-render__corner--br" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Details -->
+      <div class="pf-details reveal--right" id="fitment">
+        <div class="pf-details__sku">SKU: BX-B58-DP-5SS</div>
+        <h2 class="pf-details__name" id="product-title">
+          5&Prime; SS304 Stainless<br>Downpipe &mdash; B58
+        </h2>
+        <div class="pf-details__price"><sup>$CAD</sup> 649</div>
+
+        <!-- Spec table -->
+        <table class="spec-table" aria-label="Product specifications">
+          <tbody>
+            <tr><th scope="row">Diameter</th><td>5.0&Prime; (127mm)</td></tr>
+            <tr><th scope="row">Material</th><td>SS304 Stainless Steel</td></tr>
+            <tr><th scope="row">Wall Thickness</th><td>16 Gauge / 1.5mm</td></tr>
+            <tr><th scope="row">Weld Process</th><td>TIG Welded</td></tr>
+            <tr><th scope="row">Flange Type</th><td>V-Band + OEM Bolt-On</td></tr>
+            <tr><th scope="row">Cat Config</th><td>Catless / Catted</td></tr>
+            <tr><th scope="row">Weight</th><td>3.2 kg</td></tr>
+            <tr><th scope="row">Origin</th><td>Ontario, Canada</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Fitment list -->
+        <div class="fitment-list">
+          <div class="fitment-list__title">Confirmed Fitment</div>
+          <ul role="list">
+            <li class="fitment-item"><span class="fitment-dot" aria-hidden="true"></span>BMW 340i (G20/G21) — 2019+</li>
+            <li class="fitment-item"><span class="fitment-dot" aria-hidden="true"></span>BMW 440i (G22/G23/G26) — 2021+</li>
+            <li class="fitment-item"><span class="fitment-dot" aria-hidden="true"></span>BMW M340i (G20/G28/G30) — 2020+</li>
+            <li class="fitment-item"><span class="fitment-dot" aria-hidden="true"></span>BMW M440i (G22) — 2021+</li>
+            <li class="fitment-item"><span class="fitment-dot" aria-hidden="true"></span>Toyota GR Supra A90 (B58) — 2020+</li>
+          </ul>
+        </div>
+
+        <!-- Actions -->
+        <div class="pf-details__actions">
+          <a href="#" class="btn btn--primary btn--large" role="button">
+            Add to Cart &mdash; $649 CAD
+          </a>
+          <a href="#" class="pf-details__doc-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Installation Guide (PDF)
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================================================
+         TECHNICAL SPECS
+    ================================================ -->
+    <section class="specs-section" aria-labelledby="specs-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section-label">Technical Data // BX-B58-DP-5SS</span>
+          <h2 class="section-title" id="specs-title">The Numbers<br><span class="text--accent">Don&rsquo;t Lie</span></h2>
+        </div>
+
+        <!-- Stat blocks -->
+        <div class="stats-grid" id="stats-grid">
+          <div class="stat-block reveal">
+            <div class="stat-block__label">Internal Diameter</div>
+            <div class="stat-block__num"><span class="stat-count" data-target="5">0</span><span class="stat-block__unit">&Prime;</span></div>
+            <div class="stat-block__sub">vs. OEM 3.5&Prime; restriction</div>
+          </div>
+          <div class="stat-block reveal reveal-d1">
+            <div class="stat-block__label">Stainless Alloy Grade</div>
+            <div class="stat-block__num"><span class="stat-count" data-target="304">0</span></div>
+            <div class="stat-block__sub">Food-grade corrosion resistance</div>
+          </div>
+          <div class="stat-block reveal reveal-d2">
+            <div class="stat-block__label">Wall Thickness</div>
+            <div class="stat-block__num"><span class="stat-count" data-target="16">0</span><span class="stat-block__unit">ga</span></div>
+            <div class="stat-block__sub">1.5mm motorsport-grade</div>
+          </div>
+          <div class="stat-block reveal reveal-d3">
+            <div class="stat-block__label">Duty on Import</div>
+            <div class="stat-block__num"><span class="stat-count" data-target="0">0</span><span class="stat-block__unit">%</span></div>
+            <div class="stat-block__sub">Ontario domestic — no border fees</div>
+          </div>
+        </div>
+
+        <!-- Diameter comparison -->
+        <div class="diameter-compare reveal" id="diameter-compare">
+          <div class="diameter-compare__title">Diameter Comparison — OEM vs BakerX</div>
+          <div class="compare-row">
+            <span class="compare-label">OEM Downpipe</span>
+            <div class="compare-bar-wrap">
+              <div class="compare-bar compare-bar--oem" data-width="70%">
+                <span>3.5&Prime;</span>
+              </div>
+            </div>
+          </div>
+          <div class="compare-row">
+            <span class="compare-label">BakerX 5&Prime;</span>
+            <div class="compare-bar-wrap">
+              <div class="compare-bar compare-bar--bx" data-width="100%">
+                <span>5.0&Prime;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         TRUST BAR
+    ================================================ -->
+    <section class="trust-bar" aria-label="Trust signals">
+      <div class="container">
+        <div class="trust-bar__inner">
+          <div class="trust-item reveal">
+            <div class="trust-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
+                <path d="M20 7H4C2.9 7 2 7.9 2 9v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2z"/>
+                <path d="M16 21V5c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v16"/>
+              </svg>
+            </div>
+            <div class="trust-item__stat">200+</div>
+            <div class="trust-item__label">Units Shipped</div>
+          </div>
+          <div class="trust-item reveal reveal-d1">
+            <div class="trust-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
+                <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <div class="trust-item__stat">25+</div>
+            <div class="trust-item__label">Verified Installer Shops</div>
+          </div>
+          <div class="trust-item reveal reveal-d2">
+            <div class="trust-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+            </div>
+            <div class="trust-item__stat">100%</div>
+            <div class="trust-item__label">Fitment Guarantee</div>
+          </div>
+          <div class="trust-item reveal reveal-d3">
+            <div class="trust-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
+                <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z"/>
+              </svg>
+            </div>
+            <div class="trust-item__stat">Ontario</div>
+            <div class="trust-item__label">Designed &amp; Manufactured</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         INSTALLER PROGRAM
+    ================================================ -->
+    <section class="installer section" id="installer" aria-labelledby="installer-title">
+      <div class="container">
+        <div class="installer__inner">
+
+          <!-- Content -->
+          <div class="installer__content">
+            <div class="reveal">
+              <span class="section-label">For Performance Shops</span>
+              <h2 class="section-title" id="installer-title">
+                Precision Parts For<br><span class="text--accent">Precision Shops</span>
+              </h2>
+            </div>
+            <p class="installer__body reveal" style="transition-delay:80ms">
+              BakerX works directly with Canadian performance shops. No middlemen,
+              no dropship uncertainty. Get access to installer pricing, priority inventory,
+              and direct technical support from the engineers who build the parts.
+            </p>
+            <ul class="installer__benefits reveal" style="transition-delay:160ms" role="list">
+              <li class="benefit-item">Volume pricing tiers — 10% to 20% off</li>
+              <li class="benefit-item">Priority inventory allocation</li>
+              <li class="benefit-item">Direct phone &amp; email technical support</li>
+              <li class="benefit-item">Co-branded fitment certificates</li>
+              <li class="benefit-item">BakerX Verified Installer badge &amp; shop listing</li>
+            </ul>
+            <div class="reveal" style="transition-delay:240ms">
+              <a href="#installer-form" class="btn btn--primary">Apply for Installer Pricing</a>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="installer__form-wrap">
+            <div class="installer__form reveal--right" id="installer-form">
+              <div class="form__header">Installer Application</div>
+              <form id="apply-form" novalidate>
+                <div class="form__group">
+                  <label class="form__label" for="shop-name">Shop Name</label>
+                  <input class="form__input" type="text" id="shop-name" name="shop-name" placeholder="Street Performance Co." required autocomplete="organization">
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="province">Province</label>
+                  <select class="form__input" id="province" name="province" required>
+                    <option value="" disabled selected>Select Province</option>
+                    <option value="ON">Ontario</option>
+                    <option value="QC">Quebec</option>
+                    <option value="BC">British Columbia</option>
+                    <option value="AB">Alberta</option>
+                    <option value="MB">Manitoba</option>
+                    <option value="SK">Saskatchewan</option>
+                    <option value="NS">Nova Scotia</option>
+                    <option value="NB">New Brunswick</option>
+                    <option value="OTHER">Other</option>
+                  </select>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="email">Email Address</label>
+                  <input class="form__input" type="email" id="email" name="email" placeholder="shop@example.com" required autocomplete="email">
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="volume">Monthly BMW Volume (approx.)</label>
+                  <select class="form__input" id="volume" name="volume" required>
+                    <option value="" disabled selected>Select Volume</option>
+                    <option value="1-5">1–5 vehicles</option>
+                    <option value="6-15">6–15 vehicles</option>
+                    <option value="15+">15+ vehicles</option>
+                  </select>
+                </div>
+                <div class="form__group" style="margin-top:1.5rem">
+                  <button type="submit" class="btn btn--primary btn--full">Submit Application</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================
+       FOOTER
+  ================================================ -->
+  <footer class="footer" id="about-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+
+        <!-- Brand col -->
+        <div>
+          <a href="#" aria-label="BakerX Performance Parts — Home">
+            <svg viewBox="0 0 140 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:20px;width:auto" aria-hidden="true">
+              <text x="0" y="22" font-family="Oswald, sans-serif" font-weight="700" font-size="24" fill="#ffffff" letter-spacing="1">BAKER</text>
+              <text x="89" y="22" font-family="Oswald, sans-serif" font-weight="700" font-size="24" fill="#E60000" letter-spacing="1">X</text>
+              <line x1="89" y1="25" x2="110" y2="25" stroke="#E60000" stroke-width="1.5"/>
+            </svg>
+          </a>
+          <p class="footer__brand-tagline">Engineered in Ontario.<br>Built to last.</p>
+          <div class="footer__social" aria-label="Social media links">
+            <a href="#" aria-label="BakerX on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+            </a>
+            <a href="#" aria-label="BakerX on YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Products col -->
+        <nav aria-label="Products navigation">
+          <div class="footer__nav-heading">Products</div>
+          <ul class="footer__nav-list" role="list">
+            <li><a href="#product">B58 Downpipe 5&Prime;</a></li>
+            <li><a href="#">Charge Pipe (Coming Soon)</a></li>
+            <li><a href="#">Intercooler (Coming Soon)</a></li>
+            <li><a href="#">Full B58 Kit</a></li>
+          </ul>
+        </nav>
+
+        <!-- Company col -->
+        <nav aria-label="Company navigation">
+          <div class="footer__nav-heading">Company</div>
+          <ul class="footer__nav-list" role="list">
+            <li><a href="#about">About BakerX</a></li>
+            <li><a href="#installer">Installer Program</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </nav>
+
+        <!-- Support col -->
+        <nav aria-label="Support navigation">
+          <div class="footer__nav-heading">Support</div>
+          <ul class="footer__nav-list" role="list">
+            <li><a href="#fitment">Fitment Guide</a></li>
+            <li><a href="#">Install Documentation</a></li>
+            <li><a href="#">Warranty &amp; Returns</a></li>
+            <li><a href="#">Dealer Locator</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          &copy; 2026 BakerX Performance Parts. Ontario, Canada. All rights reserved.
+        </p>
+        <div class="footer__canada-badge" aria-label="Canadian brand">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M12 2l1.5 4.5H18l-3.7 2.7 1.4 4.3L12 11l-3.7 2.5 1.4-4.3L6 6.5h4.5L12 2z"/>
+            <line x1="12" y1="11" x2="12" y2="22"/>
+          </svg>
+          <span>Canadian Brand</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================================
+       JAVASCRIPT
+  ================================================ -->
+  <script>
+    'use strict';
+
+    /* -------- NAV SCROLL BEHAVIOR -------- */
+    const nav = document.getElementById('site-nav');
+    const SCROLL_THRESHOLD = 80;
+
+    function onScroll() {
+      if (window.scrollY > SCROLL_THRESHOLD) {
+        nav.classList.add('nav--scrolled');
+      } else {
+        nav.classList.remove('nav--scrolled');
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // init
+
+    /* -------- MOBILE DRAWER -------- */
+    const hamburger  = document.getElementById('hamburger');
+    const drawer     = document.getElementById('mobile-drawer');
+    const drawerLinks = drawer.querySelectorAll('a');
+
+    function openDrawer() {
+      drawer.classList.add('is-open');
+      hamburger.classList.add('is-open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      drawer.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('is-open');
+      hamburger.classList.remove('is-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      drawer.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', () => {
+      drawer.classList.contains('is-open') ? closeDrawer() : openDrawer();
+    });
+
+    drawerLinks.forEach(link => link.addEventListener('click', closeDrawer));
+
+    // Close on ESC
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && drawer.classList.contains('is-open')) closeDrawer();
+    });
+
+    /* -------- INTERSECTION OBSERVER: SCROLL REVEAL -------- */
+    const revealEls = document.querySelectorAll('.reveal, .reveal--left, .reveal--right');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    /* -------- STAT COUNTER ANIMATION -------- */
+    function easeOutCubic(t) {
+      return 1 - Math.pow(1 - t, 3);
+    }
+
+    function animateCounter(el, target, duration) {
+      const start = performance.now();
+      function update(now) {
+        const elapsed  = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased    = easeOutCubic(progress);
+        el.textContent = Math.round(eased * target);
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+
+    const statsGrid   = document.getElementById('stats-grid');
+    const statCounts  = statsGrid.querySelectorAll('.stat-count');
+    let statsAnimated = false;
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !statsAnimated) {
+          statsAnimated = true;
+          statCounts.forEach(el => {
+            const target = parseInt(el.dataset.target, 10);
+            // Vary duration for drama — larger numbers animate longer
+            const duration = target > 100 ? 1400 : target > 10 ? 900 : 600;
+            animateCounter(el, target, duration);
+          });
+          statsObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    statsObserver.observe(statsGrid);
+
+    /* -------- DIAMETER BAR ANIMATION -------- */
+    const diameterSection = document.getElementById('diameter-compare');
+    const bars            = diameterSection.querySelectorAll('.compare-bar');
+    let barsAnimated      = false;
+
+    const barObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !barsAnimated) {
+          barsAnimated = true;
+          bars.forEach((bar, i) => {
+            // Stagger: BX bar starts slightly after OEM
+            setTimeout(() => {
+              bar.style.width = bar.dataset.width;
+            }, i * 150);
+          });
+          barObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.4 });
+
+    barObserver.observe(diameterSection);
+
+    /* -------- FORM VALIDATION -------- */
+    const applyForm = document.getElementById('apply-form');
+
+    function shakeEl(el) {
+      el.animate([
+        { transform: 'translateX(0)' },
+        { transform: 'translateX(-5px)' },
+        { transform: 'translateX(5px)' },
+        { transform: 'translateX(-4px)' },
+        { transform: 'translateX(4px)' },
+        { transform: 'translateX(0)' }
+      ], { duration: 320, easing: 'ease-out' });
+    }
+
+    if (applyForm) {
+      applyForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const fields = applyForm.querySelectorAll('[required]');
+        let valid = true;
+
+        fields.forEach(field => {
+          const isEmpty = !field.value.trim();
+          const isInvalidEmail = field.type === 'email' && field.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value);
+
+          if (isEmpty || isInvalidEmail) {
+            field.classList.add('form__input--error');
+            shakeEl(field);
+            valid = false;
+          } else {
+            field.classList.remove('form__input--error');
+          }
+        });
+
+        // Remove error class on input
+        fields.forEach(field => {
+          field.addEventListener('input', () => field.classList.remove('form__input--error'), { once: true });
+        });
+
+        if (valid) {
+          const formContainer = document.getElementById('installer-form');
+          formContainer.innerHTML = `
+            <div class="form__success">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#E60000" stroke-width="1.5" stroke-linecap="square" style="margin:0 auto 1.5rem" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+              <div class="form__success-title">Application Received</div>
+              <p class="form__success-body">
+                We&rsquo;ll review your shop details and reach out<br>
+                within 1&ndash;2 business days. Thank you.
+              </p>
+            </div>
+          `;
+        }
+      });
+    }
+
+    /* -------- SMOOTH SCROLL OFFSET FIX -------- */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        const offset = target.getBoundingClientRect().top + window.scrollY - (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 64);
+        window.scrollTo({ top: offset, behavior: 'smooth' });
+        // Close drawer if open
+        if (drawer.classList.contains('is-open')) closeDrawer();
+      });
+    });
+  </script>
+</body>
+</html>
